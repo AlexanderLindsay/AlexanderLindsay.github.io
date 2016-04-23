@@ -240,3 +240,12 @@
         }
     }
 }
+
+.post-embeded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
