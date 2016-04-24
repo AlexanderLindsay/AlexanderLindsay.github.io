@@ -19,3 +19,9 @@ tz: America/Los_Angeles
 
 # Build settings
 markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+gems:
+    - jekyll-gist

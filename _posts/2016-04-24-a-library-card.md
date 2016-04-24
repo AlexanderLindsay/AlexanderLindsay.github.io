@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting a Library Card
+category: programming
 ---
 ## Or How to install Jekyll (and Ruby) on Bash on Windows
 
@@ -20,9 +21,9 @@ So the first step in getting Jekyll installed is to install Ruby, [You can view 
 
 The [Ruby][ruby install] site gives the following install instructions:
 
-{% highlight bash %}
-sudo apt-get install ruby-full
-{% endhighlight %}
+``` console
+$ sudo apt-get install ruby-full
+```
 
 However, that installs version 1.9.3 while Jekyll needs v2 or above, at least if you want to use Jekyll 3, and I want the latest version :). 
 
@@ -34,21 +35,21 @@ So, if you are following along, you should have ruby 2.3.0 installed and can che
 
 However, I found that there are a few more requirements to getting jekyll to install correctly, we need make and gcc.
 
-{% highlight bash %}
-apt-get install make gcc
-{% endhighlight %}
+``` console
+$ apt-get install make gcc
+```
 
 Now we should be able to install jekyll.
 
-{% highlight bash %}
-gem install jekyll
-{% endhighlight %}
+``` console
+$ gem install jekyll
+```
 
 And then lets test it.
 
-{% highlight bash %}
+``` console
 jekyll -v
-{% endhighlight %}
+```
 
 And so ends the post.
 
