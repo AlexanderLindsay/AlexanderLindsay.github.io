@@ -249,3 +249,21 @@
     padding: 10px;
     padding-bottom: 20px;
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+    .pagination .previous {
+    }
+
+    .pagination .page-number {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .pagination .next {
+    }
