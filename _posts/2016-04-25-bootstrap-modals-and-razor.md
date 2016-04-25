@@ -57,6 +57,8 @@ What we have now should work, however the modal will be blank as we don't have a
 
 It is just the basic modal content, nothing fancy.
 
+![modal sample]({{ site.baseurl }}/assets/ModalSample.png)
+
 We are not quite done yet, there is still the issue of refreshing the content of the modal. As it stands, the partial view is requested once, the first time it is opened. After that the modal just displays the previously fetched html.
 
 A simple but crude way to fix this issue is to reset the modal when it is closed so that bootstrap recreates it next time it is opened.
