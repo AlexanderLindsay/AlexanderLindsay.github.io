@@ -2,7 +2,10 @@
 layout: post
 title: MVC Partial Views in Bootstrap Modals
 category: programming
-tags: bootstrap, ASP.NET MVC, ASP.NET Core
+tags: 
+    - bootstrap
+    - ASP.NET MVC
+    - ASP.NET Core
 ---
 
 I couldn't think of a joke for this one. At least none that I was partial to.
