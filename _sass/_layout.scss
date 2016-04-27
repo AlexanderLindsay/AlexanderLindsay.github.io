@@ -250,6 +250,19 @@
     padding-bottom: 20px;
 }
 
+.tag {
+    font-size: 12px;
+    background-color: #e1ecf4;
+    color: #33658a;
+    padding: .4em .5em;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tag:hover {
+    background-color: #cee0ed;
+}
+
 .pagination {
     display: flex;
     align-items: center;
