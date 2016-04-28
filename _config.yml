@@ -14,8 +14,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://amlblog.net" # the base hostname & protocol for your site
 twitter_username: allmanylots
 github_username: alexanderlindsay
-exclude: [README.md]
-tz: America/Los_Angeles
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - .git/
+
+timezone: America/Los_Angeles
 paginate: 10
 
 # Build settings
