@@ -8,9 +8,9 @@ tags:
     - ASP.NET Core
 ---
 
-This is a follow up to the previous post on [Bootstrap Modals and Partial Views]({% post_url 2016-04-25-bootstrap-modals-and-razor %}).  That post discussed how to get a bootstrap modal to load a partial view. in this post we will add a form to that partial view/modal. 
+This is a follow-up to the previous post on [Bootstrap Modals and Partial Views]({% post_url 2016-04-25-bootstrap-modals-and-razor %}).  That post discussed how to get a bootstrap modal to load a partial view. in this post we will add a form to that partial view/modal. 
 
-The code is still located in this [repositiory][repository] on github.
+The code is still located in this [repository][repository] on GitHub.
 
 So the last post left us with a bootstrap modal with the content dynamically loaded from a partial view. 
 Here is the partial view:
@@ -89,11 +89,11 @@ The same thing in ASP.NET Core MVC is:
 </div>
 ```
 
-The key bit is using wrapping the whole thing in the #target div. This allows the ajax form post, which ASP.NET's unobtrusive ajax handles for us, to replace the content of the modal with the results of the form. Also the buttons are wrapped in the form to allow the OK button to submit the form without any javascript fanciness.
+The key bit is using wrapping the modal content in the #target div. This allows the ajax form post, which ASP.NET's unobtrusive ajax handles for us, to replace the content of the modal with the results of the form. Also the buttons are wrapped in the form to allow the OK button to submit the form without any additional JavaScript.
 
-To get the `Ajax.BeginForm` or `data-ajax="true"` to work, we to install the microsoft jquery unobtrusive ajax package. There is a [Microsoft.jQuery.Unobtrusive.Ajax][unobtrusive] NuGet package for that purpose. If you are using ASP.NET Core you can get the new version from [bower][bower]. You could also recreate it, either version, yourself it you were so inclined, but that is out of scope for this blog post.
+To get the `Ajax.BeginForm` or `data-ajax="true"` to work, we to install the Microsoft jQuery unobtrusive ajax package. There is a [Microsoft.jQuery.Unobtrusive.Ajax][unobtrusive] NuGet package for that purpose. If you are using ASP.NET Core you can get the new version from [bower][bower]. You could also recreate it, either version, yourself it you were so inclined, but that is out of scope for this blog post.
 
-Now that we have added the form to the partial view, we need to change the controller to return the correct response. First, create a action that corresponds with action used by the form.
+Now that we have added the form to the partial view, we need to change the controller to return the correct response. First, create an action that corresponds with action used by the form.
 
 ```c#
 [HttpPost]
@@ -104,10 +104,10 @@ public ActionResult PostModal()
 }
 ```
 
-This enables the form modal to work, but posting the form will just return the form. If we want the modal to close once the form is posted successfully than we will need a new partial view. A `CloseModal` partial view. In that partial view we will add some javascript to close the modal.
+This enables the form modal to work, but posting the form will just return the form. If we want the modal to close once the form is posted successfully than we will need a new partial view. A `CloseModal` partial view. In that partial view we will add some JavaScript to close the modal.
 
 ```html
-<script type="text/javascript">
+<script type="text/JavaScript">
     $(function () {
         $('#modal-container').modal('hide');
     });
@@ -130,14 +130,14 @@ public ActionResult PostModal()
 
 Now, this is pretty good. We have a form that can post and close the modal. However, what if this was a modal for adding an item to a list?
 
-We can add some more javascript to the `CloseModal` view to accomplish this.
+We can add some more JavaScript to the `CloseModal` view to accomplish this.
 
 ```html
 @model BootstrapModalPartialViewCore.Models.CloseModal
 
 @if (Model.ShouldClose)
 {
-    <script type="text/javascript">
+    <script type="text/JavaScript">
         $(function () {
             $('#modal-container').modal('hide');
         });
@@ -146,7 +146,7 @@ We can add some more javascript to the `CloseModal` view to accomplish this.
 
 @if (Model.FetchData)
 {
-    <script type="text/javascript">
+    <script type="text/JavaScript">
         $(function () {
             $.ajax({
                 method: "GET",
@@ -170,7 +170,7 @@ We can add some more javascript to the `CloseModal` view to accomplish this.
 }
 ```
 
-We need a CloseModal modal to store several parameters. Particular the url to call and what to do with the result of the call and what method to call when it succeeds. One of the many reasonable varients of this would be to just call a method instead of calling the ajax directly. I choose this method as it allows me to put not have any extra javascript on the page, unless I add a `onSuccess` or `onFailure` functions.
+We need a `CloseModal` modal to store several parameters. Particular the url to call and what to do with the result of the call and what method to call when it succeeds. One of the many reasonable variants of this would be to just call a method instead of calling the ajax directly. I choose this method as it allows me to put not have any extra JavaScript on the page, unless I add a `onSuccess` or `onFailure` functions.
 
 ```c#
 public class CloseModal
@@ -183,11 +183,11 @@ public class CloseModal
 }
 ```
 
-There are a couple of things to dislike about this. One, it feels wrong to add javascript after the main page has loaded. Two, this ties the html and javascript pretty closely with the c#. For example, if you need to change the id of the modal, or end up with multiple modals on the page (which I wouldn't really do with this setup), then you will need to change it in several places.
+There are a couple of things to dislike about this. One, it feels wrong to add JavaScript after the main page has loaded. Two, this ties the html and JavaScript pretty closely with the c#. For example, if you need to change the id of the modal, or end up with multiple modals on the page (which I wouldn't really do with this setup), then you will need to change it in several places.
 
 Just some things to worry about if you choose this method.
 
-Anyway, we need to change the controller to pass the CloseModal to the partial view.
+Anyway, we need to change the controller to pass the `CloseModal` to the partial view.
 
 ```c#
 [HttpPost]
