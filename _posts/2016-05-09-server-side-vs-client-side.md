@@ -8,7 +8,7 @@ tags:
     - ASP.NET MVC
 ---
 
-After the previous two posts (you can find part one [here]({% post_url 2016-04-25-bootstrap-modals-and-razor %}) and part two [here]({% post_url 2016-05-02-forms-in-bootstrap-modal-partial-view.md %})) I've been thinking about the best way to integrate ASP.NET MVC with client side frameworks like [knockout.js](http://knockoutjs.com/). With unobtrusive ajax and the `Ajax.BeginForm` or `Ajax.ActionLink` you can use very little JavaScript to create sites that behave nominally like a heavy client side app. Unless you are doing a single page app, are there benefits in using JavaScript frameworks?
+After the previous two posts (you can find part one [here]({% post_url 2016-04-25-bootstrap-modals-and-razor %}) and part two [here]({% post_url 2016-05-02-forms-in-bootstrap-modal-partial-view %})) I've been thinking about the best way to integrate ASP.NET MVC with client side frameworks like [knockout.js](http://knockoutjs.com/). With unobtrusive ajax and the `Ajax.BeginForm` or `Ajax.ActionLink` you can use very little JavaScript to create sites that behave nominally like a heavy client side app. Unless you are doing a single page app, are there benefits in using JavaScript frameworks?
 
 Yes. At least I think so. [Maybe? I don't know.](https://www.youtube.com/watch?v=x5Za8HggalY)
 
