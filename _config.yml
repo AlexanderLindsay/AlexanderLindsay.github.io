@@ -12,6 +12,10 @@ description: > # this means to ignore newlines until "baseurl:"
     A blog about whatever I find interesting. It will probably be mostly programming related, maybe with some games.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://amlblog.net" # the base hostname & protocol for your site
+twitter:
+  username: allmanylots
+author:
+  twitter: allmanylots
 twitter_username: allmanylots
 github_username: alexanderlindsay
 
@@ -33,3 +37,5 @@ kramdown:
 gems:
     - jekyll-gist
     - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-seo-tag
