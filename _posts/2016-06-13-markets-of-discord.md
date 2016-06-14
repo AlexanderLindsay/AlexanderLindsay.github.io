@@ -15,6 +15,7 @@ So what are prediction markets and what would a bot that offered one look like?
 I am no expert on prediction markets, I have only read that article, but a simple explanation would be to use a simulated stock market (*can I call it mock stock? wait no, come back.*) to try and predict events. The idea is, that if you get experts, convince them to take the simulation seriously throught the use of a monetary incentive (oh look, capitilism), you will end up with a higher price for it's stock. There are a couple formulas that are used to drive the simulation. Let's take a look at those, but first we need to discuss what fields we need for the formulas.
 
 ![Formulas]({{ site.baseurl }}/assets/PredictionMarketFormulas.png)
+
 > Image taken from the [MSDN] article
 
 Markets have only two pieces of information that the formulas care about:
