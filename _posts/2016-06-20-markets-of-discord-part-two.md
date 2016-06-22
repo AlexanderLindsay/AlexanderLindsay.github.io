@@ -154,7 +154,7 @@ namespace PredictionMarketBot
 }
 ```
 
-Rather than go through all the command code right here *(I am going to post the code on github within a day or so)*, but I do want to explain the basic structure.
+Rather than go through all the command code right here *(I am going to post the code on github within a day or so EDIT: [Here](https://github.com/AlexanderLindsay/PredictionMarketBot))*, but I do want to explain the basic structure.
 
 ```c#
 var service = Client.GetService<CommandService>();
@@ -195,4 +195,4 @@ public async static Task Reply(this DiscordClient client, User user, Channel cha
 
 The final piece of the puzzel is the `MarketsManager` class and `GetSimulator` method. Basically, they link the server the command is being sent from to a market. I ended up modifying the code from [part one]({% post_url 2016-06-13-markets-of-discord %}) a bit, and one of the pieces was adding in links to the discord server on markets and links to the discord user on the player.
 
-I plan on posing the code on github in a few days with a good readme and I will add a link here once I do. 
+I plan on posing the code on github in a few days with a good readme and I will add a link here once I do. EDIT: [Here is the github link](https://github.com/AlexanderLindsay/PredictionMarketBot). 
