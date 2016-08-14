@@ -39,3 +39,21 @@ gems:
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-seo-tag
+
+# Staticman
+staticman:
+    allowedFields: ['name', 'email', 'url', 'message']
+    branch: master
+    commitMessage: "Staticman adding comment"
+    generatedFields:
+        date:
+            type: date
+            options:
+                format: "timestamp-seconds"
+    format: yml
+    moderation: true
+    path: "_data/comments/{options.slug}"
+    requiredFields: ['name', 'email', 'message']
+    transforms:
+        email: 'md5'
+    url: https://api.staticman.net/v1/entry/AlexanderLindsay/AlexanderLindsay.github.io/master
