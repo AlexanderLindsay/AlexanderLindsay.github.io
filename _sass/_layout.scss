@@ -280,3 +280,32 @@
 
     .pagination .next {
     }
+
+.text-field {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: block;
+    font-family: $base-font-family;
+}
+
+.message {
+    border: 1px solid #222;
+    margin-bottom: 10px;
+    display: none;
+
+    .message-title {
+        font-size: 20px;
+        padding: 5px;
+        font-family: $base-font-family;
+    }
+    .message-text {
+        padding: 5px;
+        font-family: $base-font-family;
+    }
+}
+
+.message.show-message {
+    display: block;
+}
