@@ -28,7 +28,7 @@ layout: null
                     </p>
                     <p>
                         {% for tag in page.tags %}
-                        <a href="{{ site.baseurl }}/tags.html#{{ tag | replace ' ','-' }}" class="tag">{{ tag }}</a> {% endfor
+                        <a href="{{ site.baseurl }}/tags.html#{{ tag | replace: ' ','-' }}" class="tag">{{ tag }}</a> {% endfor
                         %}
                     </p>
 
