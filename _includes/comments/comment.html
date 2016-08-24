@@ -1,24 +1,21 @@
 <article class="comment js-comment">
-	<div>
+	<div class="comment-avatar">
 		<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=100">
 	</div>
-	<div>
-		<h3>
-			{% if (include.url) and (include.url != '@url') %}
-				<a rel="nofollow" href="{{ include.url }}">{{ include.name }}</a>
-			{% else %}
-				{{ include.name }}
-			{% endif %}
-		</h3>
-		<p>
-			{% if include.date %}
-				{% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
+	<div class="comment-header">
+		<div>
+			{% if (include.url) and ((include.url != '@url') or (include.url != '')) %}
+			<a rel="nofollow" href="{{ include.url }}">{{ include.name }}</a> {% else %} {{ include.name }} {% endif %}
+		</div>
+		<div>
+			{% if include.date %} {% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
 				{% include comments/format-date.html date=include.date time=true %}
-				{% if include.index %}</a>{% endif %}
-			{% else %}
-				<em>This is a preview of your comment. It may take a couple of minutes for it to be displayed to others.</em>
-			{% endif %}
-		</p>
+				{% if include.index %}</a>{% endif %} {% else %}
+			<em>This is a preview of your comment. It may take a couple of minutes for it to be displayed to others.</em> {% endif
+			%}
+		</div>
+	</div>
+	<div class="comment-body">
 		{{ include.message | markdownify }}
 	</div>
 </article>
