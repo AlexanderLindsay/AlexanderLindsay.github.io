@@ -4,8 +4,8 @@ email: b3cde9cd1756217558e6d6fffeaa7fad
 url: ''
 address: ''
 message: >-
-  With the <a asp-action="DownloadBatch" asp-controller="Sensor"
-  asp-route-id="1" data-target="#mymodal" data-toggle="modal">Open Modal</a>
+  With the &lt;a asp-action="DownloadBatch" asp-controller="Sensor"
+  asp-route-id="1" data-target="#mymodal" data-toggle="modal"&gt;Open Modal&lt;/a&gt;
   does not work and @Html.ActionLink("Download Sensor Readings",
   "DownloadBatch", "Sensor", new {  @* Tells the bootstrap javascript to do its
   thing*@  data_toggle = "modal", @* Needed to link to the html of the modal*@ 
