@@ -1,0 +1,8 @@
+_id: 1d58ba00-0758-11e7-88d7-bfb88b85c642
+name: Alex
+email: f71d1a587cd9ebb8baae2c370b68fa45
+url: ''
+address: ''
+message: "In that case, I would try and get a simple bootstrap modal working first, without the partial view loading. See https://getbootstrap.com/javascript/#live-demo in the bootstrap documentation for an example. Than you can look for help on just the boostrap part.\r\n\r\nI just realized that I left the script tags needed out of the blog post, which is my bad. Take a look at https://github.com/AlexanderLindsay/BootstrapModalPartialView/blob/master/BootstrapModalPartialView/Views/Shared/_Layout.cshtml where I use the bundled scripts and https://github.com/AlexanderLindsay/BootstrapModalPartialView/blob/master/BootstrapModalPartialView/App_Start/BundleConfig.cs where the bundled scripts are defined. \r\n\r\nSidenote: it looks like I need to fix the order comments are displayed and maybe the time component of comment time."
+date: 1489346069
+postTime: 1489346069303
