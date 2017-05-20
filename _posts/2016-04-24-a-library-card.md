@@ -5,10 +5,6 @@ category: programming
 ---
 ## Or How to install Jekyll (and Ruby) on Bash on Windows
 
-<div class="post-embeded">
-<iframe width="420" height="315" src="https://www.youtube-nocookie.com/embed/DrJo3AUggz4" frameborder="0" allowfullscreen></iframe>
-</div>
-
 When I was trying to get this blog up and running, I decided to try and install Jekyll on Bash on Windows rather than directly on Windows. This seemed like a good idea as Jekyll doesn't technically support Windows.
 
 I thought that this was going to be super simple, apt-get install jekyll, or something.
