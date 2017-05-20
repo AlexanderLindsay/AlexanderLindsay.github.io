@@ -1,0 +1,7 @@
+_id: beadd090-3aa0-11e7-9258-d7d858418965
+name: Alex
+email: f71d1a587cd9ebb8baae2c370b68fa45
+url: 'http://amlblog.net'
+address: ''
+message: "@Favricyo You can see the full project in this repo: https://github.com/AlexanderLindsay/BootstrapModalPartialView\r\nThere is a .net core version and a one with out .net core. I haven't touched either of them in a while so the core one in particular is probably out of date.\r\n\r\nHowever, almost all the code in this example goes in the index.cshtml file in Views/Home. https://github.com/AlexanderLindsay/BootstrapModalPartialView/blob/master/BootstrapModalPartialView/Views/Home/Index.cshtml\r\n\r\nDoes that help?\r\n\r\nIf you need more background you can start from this tutorial: https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/adding-a-view\r\n\r\nThen once you have created the view, you can add the code in this blog post to it. However, that might require some adjustments to any changes to MVC that have occurred since I first wrote this."
+date: 1494984772
