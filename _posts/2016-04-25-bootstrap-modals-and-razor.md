@@ -47,7 +47,7 @@ Here is old way.
 Here is the new way.
 
 ```HTML
-<a asp-action="ModalAction" asp-controller="Home" asp-route-id="1" data-target="modal-container" data-toggle="modal">Open Modal</a>
+<a asp-action="ModalAction" asp-controller="Home" asp-route-id="1" data-target="#modal-container" data-toggle="modal">Open Modal</a>
 ```
 
 Both versions accomplish the same thing. They create an anchor tag that links to the controller action that returns the partial view and they contain a hook to the modal. The `data-toggle="modal"` attribute is used by the bootstrap javascript to add a click event to the anchor tag that opens the modal. The `data-target` attribute tells the bootstrap JavaScript which modal to open.
