@@ -40,6 +40,8 @@ gems:
     - jekyll-sitemap
     - jekyll-seo-tag
 
+emptyArray: []
+
 # Staticman
 staticman:
     allowedFields: ['name', 'email', 'url', 'message']

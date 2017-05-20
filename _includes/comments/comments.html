@@ -6,17 +6,18 @@
 			<h2>Comments</h2>
 
 			{% if site.data.comments[post_slug] %}
-				{% assign comments = site.data.comments[post_slug] | sort %}
+				{% assign wrappedComments = site.data.comments[post_slug] %}
+                {% assign comments = site.emptyArray %}
 				
-				{% for comment in comments %}
-					{% assign email = comment[1].email %}
-					{% assign name = comment[1].name %}
-					{% assign url = comment[1].url %}
-					{% assign date = comment[1].date %}
-					{% assign message = comment[1].message %}
-
-					{% include comments/comment.html index=forloop.index email=email name=name url=url date=date message=message %}
+				{% for wrapped in wrappedComments %}
+                    {% assign comment = wrapped[1] %}
+                    {% assign comments = (comments | push: comment) %}
 				{% endfor %}
+
+                {% assign sorted = comments | sort: "date" %}
+                {% for comment in sorted %}
+					{% include comments/comment.html index=forloop.index email=comment.email name=comment.name url=comment.url date=comment.date message=comment.message %}
+                {% endfor %}
 			{% endif %}
 		</div>
 
