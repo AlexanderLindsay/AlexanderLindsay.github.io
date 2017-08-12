@@ -9,7 +9,7 @@
 title: Alexander Lindsay's Blog
 email: aml.lindsay@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    A blog about whatever I find interesting. It will probably be mostly programming related, maybe with some games.
+    A blog about whatever I find interesting. It will probably be mostly programming related, maybe with some games. Note that any of my code on this site is under the MIT license.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://amlblog.net" # the base hostname & protocol for your site
 twitter:
@@ -34,7 +34,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
 
-gems:
+plugins:
     - jekyll-gist
     - jekyll-paginate
     - jekyll-sitemap
