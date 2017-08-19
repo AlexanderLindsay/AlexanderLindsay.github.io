@@ -16,6 +16,6 @@
 		</div>
 	</div>
 	<div class="comment-body">
-		{{ include.message | markdownify }}
+		{{ include.message | escape_xml | markdownify }}
 	</div>
 </article>
