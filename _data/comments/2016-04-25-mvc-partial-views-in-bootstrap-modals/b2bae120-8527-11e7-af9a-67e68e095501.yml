@@ -1,0 +1,7 @@
+_id: b2bae120-8527-11e7-af9a-67e68e095501
+name: Alex
+email: f71d1a587cd9ebb8baae2c370b68fa45
+url: ''
+address: ''
+message: "@IY\r\n\r\nIt sounds to me like my method of deleting the existing modal data (`$(this).removeData('bs.modal');`) might not be working for you, this post is possible pretty out of date. How to fix it probably depends on what version of bootstrap you are using. \r\n\r\nThe bootstrap 3.3 docs has a bit that goes into how to accomplish a similar thing that you might want to [reference](https://getbootstrap.com/docs/3.3/javascript/#modals-related-target). The only issue being that you will need to fetch the html page yourself. The second half of this post goes into this a bit, see the last embedded gist.\r\n\r\nI think that is a good place to start looking for the error."
+date: 1503179121
