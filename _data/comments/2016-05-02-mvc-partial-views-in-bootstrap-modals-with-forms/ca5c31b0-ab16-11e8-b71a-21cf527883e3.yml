@@ -1,0 +1,12 @@
+_id: ca5c31b0-ab16-11e8-b71a-21cf527883e3
+name: David
+email: 6f04494b28224df61f2b2d77a4330d2d
+url: ''
+address: ''
+message: >-
+  So using this method works except if I need the user to be able to open the
+  modal a 2nd time on the page after posting. The 2nd time the user clicks the
+  button that launches the modal it goes dark but doesn't open a window because
+  the modal's content has been replaced by the "closeModal" content. How would I
+  refill the modal with the form's content after the closeModal executes.
+date: 1535497501
